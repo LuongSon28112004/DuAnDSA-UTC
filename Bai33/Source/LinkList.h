@@ -231,7 +231,7 @@ void sapxep(node &a)
 		node tmp = p;
 		for (node q = p->next; q != NULL; q = q->next)
 		{
-			if (stoi(q->data.gettime_start()) < stoi(tmp->data.gettime_start()))
+			if (stof(q->data.gettime_start()) < stof(tmp->data.gettime_start()))
 			{
 				tmp = q;
 			}

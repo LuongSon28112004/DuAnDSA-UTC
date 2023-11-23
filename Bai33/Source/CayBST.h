@@ -85,12 +85,12 @@ public:
             else
             {
                 int n = Size(tmp->cv.gethead());
-                node node1_ = a->cv.gethead();
+                node &node1_ = a->cv.gethead();
                 node node2_ = tmp->cv.gethead();
                 for (int i = 0; i < n; i++)
                 {
                     CongViec p = node2_->data;
-                    insertLast(node1_, p);
+                    insertFirst(node1_, p);
                     node2_ = node2_->next;
                 }
                 sapxep(node1_);
