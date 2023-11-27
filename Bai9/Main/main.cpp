@@ -62,7 +62,6 @@ int main()
             string k;
             cout << "Nhap Vi Tri Can Them Vao:";
             getline(cin, k);
-            cin.ignore();
             if (k == "")
             {
                 Dlist->insert(tmp, 0);
@@ -114,7 +113,7 @@ int main()
         }
         system("pause");
     } while (lc != 10);
-
+    delete Dlist;
     return 0;
 }
 

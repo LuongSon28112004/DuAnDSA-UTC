@@ -159,7 +159,11 @@ int main()
             {
                 NodeBST *headPtr = BST->getheadBST();
                 BST->DeleteCacCongViecDaHoanThanh(headPtr);
-                BST->DieuChinhLichCongTac(headPtr, BST->getheadBST());
+                while(BST->checkngaytrong(BST->getheadBST()))
+                {
+                    headPtr=BST->getheadBST();
+                    BST->DieuChinhLichCongTac(headPtr, BST->getheadBST());
+                }
             }
             break;
         }

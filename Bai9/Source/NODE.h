@@ -20,7 +20,7 @@ public:
         next = NULL;
         prev = NULL;
     }
-
+    
     ~Node()
     {
         next = NULL;

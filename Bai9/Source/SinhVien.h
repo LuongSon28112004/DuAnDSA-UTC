@@ -45,7 +45,6 @@ public:
 
     sinhvien operator=(const sinhvien &a)
     {
-        cout<<"oke.\n";
         if (this == &a)
         {
             return *this;
@@ -103,32 +102,5 @@ public:
         this->tenlop = tenlop;
     }
 };
-
-// istream &operator>>(istream &input, sinhvien &a)
-// {
-//     cout << "Nhap ma sinh vien:";
-//     input >> a.msv;
-//     input.ignore();
-//     if (a.msv < 0)
-//     {
-//         return input;
-//     }
-//     cout << "Nhap ho dem:";
-//     getline(input, a.hodem);
-//     cout << "Nhap ten:";
-//     getline(input, a.ten);
-//     cout << "Nhap Diem Trung Binh:";
-//     input >> a.DiemTB;
-//     input.ignore();
-//     cout << "Nhap Ten Lop:";
-//     getline(input, a.tenlop);
-//     return input;
-// }
-
-// ostream &operator<<(ostream &output, sinhvien a)
-// {
-//     output << a.msv << setw(20) << a.hodem << setw(20) << a.ten << setw(25) << a.DiemTB << setw(20) << a.tenlop << "\n";
-//     return output;
-// }
 
 #endif

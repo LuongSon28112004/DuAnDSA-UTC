@@ -12,7 +12,7 @@ struct Node
 	Node *next;
 };
 
-typedef struct Node *node;
+typedef  Node *node;
 
 node makeNode(CongViec x)
 {
@@ -33,7 +33,7 @@ int Size(node a)
 	while (a != NULL)
 	{
 		++cnt;
-		a = a->next; // gan dia chi cua not tiep theo cho node hien tai
+		a = a->next; 
 	}
 	return cnt;
 }
@@ -65,7 +65,6 @@ int findPos(node a)
 	return 0;
 }
 
-// them 1 phan tu vao dau danh sach lien ket
 void insertFirst(node &a, CongViec x)
 {
 	node tmp = makeNode(x);
@@ -80,7 +79,6 @@ void insertFirst(node &a, CongViec x)
 	}
 }
 
-// Them 1 phan tu vao cuoi dslk
 void insertLast(node &a, CongViec x)
 {
 	node tmp = makeNode(x);
@@ -99,13 +97,13 @@ void insertLast(node &a, CongViec x)
 	}
 }
 
-// Them 1 phan tu vao giua dslk
 void insertMiddle(node &a, CongViec x, int pos)
 {
 	int n = Size(a);
 	if (pos <= 0 || pos > n + 1)
 	{
 		cout << "Vi tri chen khong hop le !\n";
+		return;
 	}
 	if (pos == 1)
 	{
@@ -127,7 +125,7 @@ void insertMiddle(node &a, CongViec x, int pos)
 	p->next = tmp;
 }
 
-// xoa phan tu o dau
+
 void deleteDau(node &a)
 {
 	if (a == NULL)
@@ -137,7 +135,6 @@ void deleteDau(node &a)
 	a = a->next;
 }
 
-// xoa phan tu o cuoi
 void deleteCuoi(node &a)
 {
 	if (a == NULL)
@@ -158,7 +155,6 @@ void deleteCuoi(node &a)
 	}
 }
 
-// Xoa o giua
 void deleteGiua(node &a, int pos)
 {
 	if (pos <= 0 || pos > Size(a))

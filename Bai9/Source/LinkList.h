@@ -113,7 +113,7 @@ void LinkList::XoaSinhVienDiemKem()
                     {
                         head->prev = NULL;
                     }
-                    p = p->next; // cho p tien den dia chi nut tiep theo
+                    p = p->next; 
                 }
                 else if (p->next == NULL) // neu la node cuoi
                 {
@@ -124,7 +124,7 @@ void LinkList::XoaSinhVienDiemKem()
                 {
                     p->prev->next = p->next;
                     p->next->prev = p->prev;
-                    p = p->next; // cho p tien den dia chi nut tiep theo
+                    p = p->next; 
                 }
                 delete temp;
             }

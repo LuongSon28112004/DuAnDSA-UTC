@@ -25,7 +25,7 @@ public:
     ~CayBST()
     {
         headBST = NULL;
-        cnt=0;
+        cnt = 0;
     }
 
     NodeBST *&getheadBST()
@@ -252,6 +252,26 @@ public:
         {
             DeleteNode(a->left, ten_ngay);
         }
+    }
+
+    bool checkngaytrong(NodeBST *a)
+    {
+        if (a != NULL)
+        {
+            if (a->cv.gethead() == NULL)
+            {
+                return true;
+            }
+            if (checkngaytrong(a->left))
+            {
+                return true;
+            }
+            if (checkngaytrong(a->right))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     void DieuChinhLichCongTac(NodeBST *a, NodeBST *&b)
